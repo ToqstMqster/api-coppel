@@ -1,0 +1,47 @@
+GET http://localhost:3000/countries
+
+###
+
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+    "folio":20013,
+    "contrasena":"",
+    "numCentro":"567",
+    "nomCompleto":"",
+    "correo":"",
+    "telefono":"",
+    "descripcion":"",
+    "fecha":"2023-05-27T22:16:01.086Z",
+    "empresa":{"id":2,"nombre":"BanCoppel"},
+    "pais":{"id":3,"nombre":"México",
+        "estados":[
+            {"id":3,"nombre":"Aguascalientes"},
+            {"id":4,"nombre":"Campeche"},
+            {"id":5,"nombre":"Cdmx"}
+        ]},
+    "estado":{"id":5,"nombre":"Cdmx"}
+    }
+
+###
+
+GET http://localhost:3000/password/10014
+
+###
+PUT http://localhost:3000/updateReport/10013
+Content-Type: application/json
+
+{
+    "comentarios": "Si",
+    "estatus": "Finalizada"
+}
+
+####
+POST http://localhost:3000/createUser
+Content-Type: application/json
+{
+    "correo": "jose@gmail.com",
+    "contrasena": "1234",
+    "nombre": "Jose"
+}
